@@ -1,4 +1,4 @@
-/*ul#menu-main-menu {
+/*ul.menu-primary {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -8,10 +8,10 @@
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(0,0,0,.08);
 }*/
-ul#menu-main-menu {
+ul.menu-primary {
   margin-top: -5px; }
 
-ul#menu-main-menu > li {
+ul.menu-primary > li {
   float: left;
   text-align: center;
   vertical-align: top;
@@ -22,13 +22,13 @@ ul#menu-main-menu > li {
   margin-right: 37px;
   margin-top: 5px; }
 
-ul#menu-main-menu > li > a {
+ul.menu-primary > li > a {
   line-height: 76px;
   text-decoration: none;
   padding: 0 25px 0 10px;
   color: #fff; }
 
-ul#menu-main-menu > li:before, ul#menu-main-menu > li:after {
+ul.menu-primary > li:before, ul.menu-primary > li:after {
   content: ' ';
   height: 0;
   position: absolute;
@@ -39,41 +39,47 @@ ul#menu-main-menu > li:before, ul#menu-main-menu > li:after {
   /* whole border is transparent, but then the left triangle gets to be solid. Probably then the next one is the left is the only one that stays transparent, top,bottom, and right turn solid. */
   top: 0; }
 
-ul#menu-main-menu > li:before {
+ul.menu-primary > li:before {
   border-top-color: #666;
   border-bottom-color: #666;
   border-right-color: #666;
   right: 100%; }
 
-ul#menu-main-menu > li:after {
+ul.menu-primary > li:after {
   border-left-color: #666;
   left: 100%; }
 
-ul#menu-main-menu > li:first-child > a {
+ul.menu-primary > li:first-child > a {
   padding-left: 25px; }
 
-ul#menu-main-menu > li:first-child:before {
+ul.menu-primary > li:first-child:before {
   border: none !important; }
 
-ul#menu-main-menu > li:last-child:after {
+ul.menu-primary > li:last-child:after {
   border: none !important; }
 
-ul#menu-main-menu > li.current-menu-item {
+ul.menu-primary > li.current-menu-item {
+  text-decoration: none;
   background: #0064cd; }
 
-ul#menu-main-menu > li.current-menu-item:before {
+.nav-primary .genesis-nav-menu a:hover,
+.nav-primary .genesis-nav-menu a:focus,
+.nav-primary .genesis-nav-menu .current-menu-item > a {
+  text-decoration: none !important; }
+
+ul.menu-primary > li.current-menu-item:before {
   border-top-color: #0064cd;
   border-bottom-color: #0064cd;
   border-right-color: #0064cd;
   right: 100%; }
 
-ul#menu-main-menu > li.current-menu-item:after {
+ul.menu-primary > li.current-menu-item:after {
   border-left-color: #0064cd;
   left: 100%; }
 
-ul#menu-main-menu > li:hover,
-ul#menu-main-menu > li:hover:after,
-ul#menu-main-menu > li:hover:before {
+ul.menu-primary > li:hover,
+ul.menu-primary > li:hover:after,
+ul.menu-primary > li:hover:before {
   background: none;
   border-color: transparent; }
 
