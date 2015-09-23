@@ -58,22 +58,28 @@ ul.menu-primary > li:first-child:before {
 ul.menu-primary > li:last-child:after {
   border: none !important; }
 
-ul.menu-primary > li.current-menu-item {
-  text-decoration: none;
+ul.menu-primary > li.current-menu-item,
+ul.menu-primary > li.current-page-parent {
   background: #0064cd; }
+
+ul.menu-primary > li.current-menu-item a,
+ul.menu-primary > li.current-page-parent a {
+  color: #fff; }
 
 .nav-primary .genesis-nav-menu a:hover,
 .nav-primary .genesis-nav-menu a:focus,
 .nav-primary .genesis-nav-menu .current-menu-item > a {
   text-decoration: none !important; }
 
-ul.menu-primary > li.current-menu-item:before {
+ul.menu-primary > li.current-menu-item:before,
+ul.menu-primary > li.current-page-parent:before {
   border-top-color: #0064cd;
   border-bottom-color: #0064cd;
   border-right-color: #0064cd;
   right: 100%; }
 
-ul.menu-primary > li.current-menu-item:after {
+ul.menu-primary > li.current-menu-item:after,
+ul.menu-primary > li.current-page-parent:after {
   border-left-color: #0064cd;
   left: 100%; }
 
