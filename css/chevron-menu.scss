@@ -1,0 +1,106 @@
+/*ul#menu-main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin: 0 0 0px;
+    height: 38px;
+    border: 1px solid #222;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.08);
+}*/
+
+$totalHeight: 76px;
+$chevronDepth: 16px;
+$chevronGap: 5px;
+$linkPaddingRight: 25px;
+$linkPaddingLeft: 10px;
+
+$wrapGap: 5px;
+
+$backgroundColor: #666;
+$activeBackgroundColor: #0064cd;
+
+
+
+ul#menu-main-menu {
+    margin-top: -$wrapGap;
+}
+
+ul#menu-main-menu li {
+    float: left;
+    text-align: center;
+    vertical-align: top;
+    position: relative;
+    background: $backgroundColor;
+    color: #fff;
+    display: inline;
+    border: none;
+    margin-right: $chevronDepth * 2 + $chevronGap;
+    margin-top: $wrapGap;
+}
+
+ul#menu-main-menu li a {
+    line-height: $totalHeight;
+    text-decoration: none;
+    padding: 0 $linkPaddingRight 0 $linkPaddingLeft;
+    color: #fff;
+}
+
+ul#menu-main-menu li:before, ul#menu-main-menu li:after {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: $totalHeight / 2 solid transparent;
+    border-left-width: $chevronDepth;
+    border-right-width: $chevronDepth;
+    /* whole border is transparent, but then the left triangle gets to be solid. Probably then the next one is the left is the only one that stays transparent, top,bottom, and right turn solid. */
+    top: 0;
+}
+
+
+ul#menu-main-menu li:before {
+    border-top-color: $backgroundColor;
+    border-bottom-color: $backgroundColor;
+    border-right-color: $backgroundColor;
+    right: 100%;
+}
+
+ul#menu-main-menu li:after {
+    border-left-color: $backgroundColor;
+    left: 100%;
+}
+
+ul#menu-main-menu li:first-child a {
+    padding-left: $linkPaddingRight;
+}
+
+ul#menu-main-menu li:first-child:before {
+    border: none !important;
+}
+
+ul#menu-main-menu li:last-child:after {
+    border: none !important;
+}
+ul#menu-main-menu li.current-menu-item {
+    background: $activeBackgroundColor;
+}
+ul#menu-main-menu li.current-menu-item:before {
+    border-top-color: $activeBackgroundColor;
+    border-bottom-color: $activeBackgroundColor;
+    border-right-color: $activeBackgroundColor;
+    right: 100%;
+}
+ul#menu-main-menu li.current-menu-item:after {
+    border-left-color: $activeBackgroundColor;
+    left: 100%;
+}
+
+
+
+ul#menu-main-menu li:hover,
+ul#menu-main-menu li:hover:after,
+ul#menu-main-menu li:hover:before {
+	background: none;
+	border-color:transparent;
+}
