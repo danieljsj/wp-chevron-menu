@@ -26,27 +26,27 @@ ul#menu-main-menu {
     margin-top: -$wrapGap;
 }
 
-ul#menu-main-menu li {
+ul#menu-main-menu > li {
     float: left;
     text-align: center;
     vertical-align: top;
     position: relative;
     background: $backgroundColor;
-    color: #fff;
+    // color: #fff; // this affects the coloring of all sub items, of course.
     display: inline;
     border: none;
     margin-right: $chevronDepth * 2 + $chevronGap;
     margin-top: $wrapGap;
 }
 
-ul#menu-main-menu li a {
+ul#menu-main-menu > li > a {
     line-height: $totalHeight;
     text-decoration: none;
     padding: 0 $linkPaddingRight 0 $linkPaddingLeft;
-    color: #fff;
+    color: #fff; 
 }
 
-ul#menu-main-menu li:before, ul#menu-main-menu li:after {
+ul#menu-main-menu > li:before, ul#menu-main-menu > li:after {
     content: ' ';
     height: 0;
     position: absolute;
@@ -59,48 +59,48 @@ ul#menu-main-menu li:before, ul#menu-main-menu li:after {
 }
 
 
-ul#menu-main-menu li:before {
+ul#menu-main-menu > li:before {
     border-top-color: $backgroundColor;
     border-bottom-color: $backgroundColor;
     border-right-color: $backgroundColor;
     right: 100%;
 }
 
-ul#menu-main-menu li:after {
+ul#menu-main-menu > li:after {
     border-left-color: $backgroundColor;
     left: 100%;
 }
 
-ul#menu-main-menu li:first-child a {
+ul#menu-main-menu > li:first-child > a {
     padding-left: $linkPaddingRight;
 }
 
-ul#menu-main-menu li:first-child:before {
+ul#menu-main-menu > li:first-child:before {
     border: none !important;
 }
 
-ul#menu-main-menu li:last-child:after {
+ul#menu-main-menu > li:last-child:after {
     border: none !important;
 }
-ul#menu-main-menu li.current-menu-item {
+ul#menu-main-menu > li.current-menu-item {
     background: $activeBackgroundColor;
 }
-ul#menu-main-menu li.current-menu-item:before {
+ul#menu-main-menu > li.current-menu-item:before {
     border-top-color: $activeBackgroundColor;
     border-bottom-color: $activeBackgroundColor;
     border-right-color: $activeBackgroundColor;
     right: 100%;
 }
-ul#menu-main-menu li.current-menu-item:after {
+ul#menu-main-menu > li.current-menu-item:after {
     border-left-color: $activeBackgroundColor;
     left: 100%;
 }
 
 
 
-ul#menu-main-menu li:hover,
-ul#menu-main-menu li:hover:after,
-ul#menu-main-menu li:hover:before {
+ul#menu-main-menu > li:hover,
+ul#menu-main-menu > li:hover:after,
+ul#menu-main-menu > li:hover:before {
 	background: none;
 	border-color:transparent;
 }
